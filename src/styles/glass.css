@@ -529,6 +529,197 @@
   backdrop-filter: none !important;
 }
 
+@media (max-width: 760px) and (orientation: portrait) {
+  #root .audio-toggle {
+    top: max(10px, env(safe-area-inset-top)) !important;
+    left: 10px !important;
+    right: auto !important;
+    min-width: 68px !important;
+    height: 34px !important;
+  }
+
+  #root .glass-mode-toggle {
+    top: max(10px, env(safe-area-inset-top)) !important;
+    left: 50% !important;
+    right: auto !important;
+    min-width: 74px !important;
+    height: 34px !important;
+    transform: translateX(-50%) !important;
+  }
+
+  #root .lang-toggle {
+    top: max(10px, env(safe-area-inset-top)) !important;
+    right: 10px !important;
+    min-width: 38px !important;
+    height: 34px !important;
+  }
+
+  #root .pill-nav,
+  #root .pill-nav.nav-cover,
+  #root .pill-nav.nav-profile,
+  #root .pill-nav.nav-works,
+  #root .pill-nav.nav-contact {
+    top: calc(max(10px, env(safe-area-inset-top)) + 44px) !important;
+    width: calc(100vw - 20px) !important;
+    max-width: 360px !important;
+  }
+
+  #root .hero.cover .detail-stats {
+    grid-template-columns: 1fr !important;
+  }
+
+  #root .hero.profile:not(.works) .exp-slats,
+  #root .hero.works.profile .exp-slats {
+    inset: 106px 0 52px 0 !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    scroll-snap-type: y proximity !important;
+  }
+
+  #root .hero.profile .exp-slat,
+  #root .hero.profile .exp-slat:nth-child(n) {
+    flex: 0 0 auto !important;
+    width: min(92vw, 360px) !important;
+    min-width: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  #root .hero.profile .exp-slat-image-frame,
+  #root .hero.profile .exp-slat:nth-child(n) .exp-slat-image-frame {
+    height: clamp(190px, 48vw, 280px) !important;
+  }
+
+  #root .hero.profile .exp-slat-text,
+  #root .hero.works.profile .exp-slat-text {
+    height: auto !important;
+    max-height: none !important;
+  }
+}
+
+@media (max-width: 760px) and (orientation: portrait) {
+  #root .audio-toggle,
+  #root .glass-mode-toggle,
+  #root .lang-toggle {
+    top: max(10px, env(safe-area-inset-top)) !important;
+    height: 34px !important;
+    min-height: 34px !important;
+    padding: 0 9px !important;
+    font-size: 11px !important;
+  }
+
+  #root .audio-toggle {
+    left: 10px !important;
+    right: auto !important;
+    min-width: 68px !important;
+  }
+
+  #root .glass-mode-toggle {
+    left: 50% !important;
+    right: auto !important;
+    min-width: 74px !important;
+    transform: translateX(-50%) !important;
+  }
+
+  #root .lang-toggle {
+    right: 10px !important;
+    min-width: 38px !important;
+  }
+
+  #root .pill-nav,
+  #root .pill-nav.nav-cover,
+  #root .pill-nav.nav-profile,
+  #root .pill-nav.nav-works,
+  #root .pill-nav.nav-contact {
+    top: calc(max(10px, env(safe-area-inset-top)) + 44px) !important;
+    width: calc(100vw - 20px) !important;
+    max-width: 360px !important;
+  }
+
+  #root .hero.cover {
+    padding: 116px 16px 58px !important;
+    align-items: start !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  #root .hero.cover .hero-bottom {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    padding-bottom: 24px !important;
+  }
+
+  #root .hero.cover .detail-stats {
+    grid-template-columns: 1fr !important;
+  }
+
+  #root .hero.cover .cover-detail {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  #root .hero.profile:not(.works) .exp-slats,
+  #root .hero.works.profile .exp-slats {
+    position: absolute !important;
+    inset: 106px 0 52px 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 16px !important;
+    height: auto !important;
+    padding: 12px 16px 30px !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    scroll-snap-type: y proximity !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  #root .hero.profile .exp-slat,
+  #root .hero.profile .exp-slat:nth-child(n) {
+    flex: 0 0 auto !important;
+    width: min(92vw, 360px) !important;
+    min-width: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    transform: none !important;
+    scroll-snap-align: start !important;
+  }
+
+  #root .hero.profile .exp-slat-image-frame,
+  #root .hero.profile .exp-slat:nth-child(n) .exp-slat-image-frame {
+    width: 100% !important;
+    height: clamp(190px, 48vw, 280px) !important;
+    transform: none !important;
+  }
+
+  #root .hero.profile .exp-slat-body,
+  #root .hero.works.profile .exp-slat-body {
+    width: 100% !important;
+    margin-top: 10px !important;
+  }
+
+  #root .hero.profile .exp-slat-text,
+  #root .hero.works.profile .exp-slat-text {
+    width: 100% !important;
+    min-height: 0 !important;
+    height: auto !important;
+    max-height: none !important;
+    padding: 12px 14px !important;
+  }
+
+  #root .hero.profile .exp-slat > .exp-slat-year {
+    top: 10px !important;
+    left: 10px !important;
+    right: auto !important;
+    transform: none !important;
+  }
+}
+
 @media (max-width: 760px) {
   html,
   body,
@@ -642,7 +833,7 @@
   }
 
   #root .hero.cover .detail-stats {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-columns: 1fr !important;
     gap: 8px !important;
   }
 
@@ -683,31 +874,33 @@
     position: absolute !important;
     inset: 112px 0 78px 0 !important;
     display: flex !important;
+    flex-direction: column !important;
     align-items: center !important;
     justify-content: flex-start !important;
     gap: 14px !important;
     height: auto !important;
     padding: 0 18px !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-    scroll-snap-type: x mandatory !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    scroll-snap-type: y proximity !important;
     -webkit-overflow-scrolling: touch !important;
   }
 
   #root .hero.profile .exp-slat,
   #root .hero.profile .exp-slat:nth-child(n) {
-    flex: 0 0 min(76vw, 300px) !important;
-    width: min(76vw, 300px) !important;
-    min-width: min(76vw, 300px) !important;
-    height: min(68dvh, 520px) !important;
+    flex: 0 0 auto !important;
+    width: min(92vw, 360px) !important;
+    min-width: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
     transform: none !important;
-    scroll-snap-align: center !important;
+    scroll-snap-align: start !important;
   }
 
   #root .hero.profile .exp-slat-image-frame,
   #root .hero.profile .exp-slat:nth-child(n) .exp-slat-image-frame {
     width: 100% !important;
-    height: min(42dvh, 320px) !important;
+    height: clamp(190px, 48vw, 280px) !important;
     transform: none !important;
   }
 
@@ -721,7 +914,7 @@
   #root .hero.works.profile .exp-slat-text {
     min-height: 118px !important;
     height: auto !important;
-    max-height: 152px !important;
+    max-height: none !important;
     padding: 12px 13px !important;
   }
 
