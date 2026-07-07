@@ -902,6 +902,15 @@ function App() {
     const video = welcomeVideoRef.current;
     if (!video || entering) return;
     playBgm();
+    if (window.matchMedia?.("(max-width: 760px) and (orientation: portrait)")?.matches) {
+      video.pause();
+      setWelcomePlaying(false);
+      setHomeRevealed(true);
+      setEntering(false);
+      setEntered(true);
+      setSiteReady(true);
+      return;
+    }
     setWelcomePlaying(true);
     setSiteReady(false);
     museumZoomStartedRef.current = false;

@@ -1022,6 +1022,304 @@
   backdrop-filter: none !important;
 }
 
+@media (max-width: 760px) and (orientation: portrait) {
+  #root html,
+  body,
+  #root,
+  #root .album-shell {
+    width: 100vw !important;
+    min-height: 100dvh !important;
+    overflow: hidden !important;
+  }
+
+  #root .museum-welcome.welcome-screen {
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 0 18px !important;
+  }
+
+  #root .museum-welcome .welcome-kicker,
+  #root .museum-welcome .welcome-name,
+  #root .museum-welcome .welcome-role,
+  #root .museum-welcome .welcome-action {
+    left: 0 !important;
+    width: min(92vw, 420px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    transform: none !important;
+    text-align: center !important;
+  }
+
+  #root .museum-welcome .welcome-action {
+    width: auto !important;
+    align-self: center !important;
+    position: absolute !important;
+    left: 50% !important;
+    top: calc(50dvh + 60px) !important;
+    right: auto !important;
+    bottom: auto !important;
+    margin: 0 !important;
+    transform: translateX(-50%) !important;
+  }
+
+  #root .audio-toggle,
+  #root .glass-mode-toggle,
+  #root .lang-toggle {
+    top: max(12px, env(safe-area-inset-top)) !important;
+    height: 36px !important;
+    min-height: 36px !important;
+    transform: none !important;
+  }
+
+  #root .audio-toggle {
+    left: 12px !important;
+    right: auto !important;
+    min-width: 72px !important;
+  }
+
+  #root .glass-mode-toggle {
+    left: 50% !important;
+    right: auto !important;
+    min-width: 72px !important;
+    transform: translateX(-50%) !important;
+  }
+
+  #root .lang-toggle {
+    right: 12px !important;
+    min-width: 42px !important;
+  }
+
+  #root .pill-nav,
+  #root .pill-nav.nav-cover,
+  #root .pill-nav.nav-profile,
+  #root .pill-nav.nav-works,
+  #root .pill-nav.nav-contact {
+    top: calc(max(12px, env(safe-area-inset-top)) + 48px) !important;
+    left: 50% !important;
+    right: auto !important;
+    width: min(352px, calc(100vw - 24px)) !important;
+    max-width: calc(100vw - 24px) !important;
+    padding: 4px !important;
+    transform: translateX(-50%) !important;
+  }
+
+  #root .pill-tabs {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 2px !important;
+    width: 100% !important;
+  }
+
+  #root .pill-tabs > li {
+    min-width: 0 !important;
+    display: flex !important;
+  }
+
+  #root .pill-nav .pill-tabs::before {
+    top: 4px !important;
+    bottom: 4px !important;
+    left: calc(var(--active-index, 0) * ((100% + 2px) / 4)) !important;
+    width: calc((100% - 6px) / 4) !important;
+    border-radius: 999px !important;
+    transform: none !important;
+  }
+
+  #root .pill-tabs button,
+  #root .pill-tabs button:hover,
+  #root .pill-tabs button.is-on,
+  #root .pill-tabs button:active {
+    width: 100% !important;
+    min-width: 0 !important;
+    height: 38px !important;
+    padding: 0 4px !important;
+    border-radius: 999px !important;
+    transform: none !important;
+    white-space: nowrap !important;
+    box-sizing: border-box !important;
+  }
+
+  #root .hero.cover,
+  #root .hero.contact {
+    height: 100dvh !important;
+    min-height: 100dvh !important;
+    padding: 126px 18px 84px !important;
+    display: block !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  #root .hero.cover .hero-bottom,
+  #root .hero.contact .hero-bottom {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    transform: none !important;
+  }
+
+  #root .hero.cover .hero-title,
+  #root .hero.contact .hero-title {
+    max-width: 100% !important;
+    font-size: clamp(38px, 12vw, 56px) !important;
+    line-height: 0.96 !important;
+    white-space: normal !important;
+  }
+
+  #root .hero.cover .hero-lede,
+  #root .hero.contact .hero-lede,
+  #root .hero.cover .hero-side-text,
+  #root .hero.contact .hero-side-text {
+    max-width: 100% !important;
+    font-size: 12px !important;
+    line-height: 1.55 !important;
+  }
+
+  #root .hero.cover .hero-side-text,
+  #root .hero.contact .hero-side-text {
+    display: none !important;
+  }
+
+  #root .hero.cover .cover-detail {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  #root .hero.cover .detail-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+  }
+
+  #root .hero.cover .skills-block {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  #root .hero.cover .skills-block article,
+  #root .hero.cover .detail-stats div {
+    min-height: 0 !important;
+  }
+
+  #root .hero.profile:not(.works) .exp-slats,
+  #root .hero.works.profile .exp-slats {
+    position: absolute !important;
+    inset: 122px 0 26px 0 !important;
+    height: auto !important;
+    max-height: none !important;
+    padding: 0 16px 28px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 14px !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    scroll-snap-type: y proximity !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  #root .hero.profile .exp-slat,
+  #root .hero.profile .exp-slat:nth-child(n),
+  #root .hero.profile .exp-slat:hover {
+    flex: 0 0 auto !important;
+    width: min(92vw, 360px) !important;
+    min-width: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    transform: none !important;
+    scroll-snap-align: start !important;
+  }
+
+  #root .hero.profile .exp-slat-image-frame,
+  #root .hero.profile .exp-slat:nth-child(n) .exp-slat-image-frame,
+  #root .hero.profile .exp-slat:hover .exp-slat-image-frame {
+    width: 100% !important;
+    height: clamp(178px, 48vw, 250px) !important;
+    margin-left: 0 !important;
+    transform: none !important;
+  }
+
+  #root .hero.profile .exp-slat-body,
+  #root .hero.works.profile .exp-slat-body {
+    width: 100% !important;
+    height: auto !important;
+    margin-top: 10px !important;
+  }
+
+  #root .hero.profile .exp-slat-text,
+  #root .hero.works.profile .exp-slat-text,
+  #root .hero.profile .exp-slat:hover .exp-slat-text {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 112px !important;
+    max-height: none !important;
+    padding: 12px 13px !important;
+    transform: none !important;
+  }
+
+  #root .hero.profile .exp-slat > .exp-slat-year {
+    position: static !important;
+    order: 0 !important;
+    width: min(72vw, 258px) !important;
+    max-width: 100% !important;
+    margin: 0 auto 8px !important;
+    justify-content: center !important;
+    transform: none !important;
+  }
+
+  #root .hero.profile .exp-slat-image-frame {
+    order: 1 !important;
+  }
+
+  #root .hero.profile .exp-slat-body {
+    order: 2 !important;
+  }
+
+  #root .hero.contact {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+
+  #root .hero.contact .hero-bottom {
+    justify-content: center !important;
+  }
+
+  #root .hero.contact .hero-title-block {
+    display: grid !important;
+    gap: 10px !important;
+  }
+
+  #root .hero.contact .detail-contact {
+    width: 100% !important;
+    display: grid !important;
+    gap: 10px !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  #root .hero.contact .detail-contact p {
+    align-items: flex-start !important;
+    line-height: 1.45 !important;
+  }
+
+  #root .hero.contact .contact-thanks {
+    position: static !important;
+    order: 2 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 16px 0 10px !important;
+    transform: none !important;
+    font-size: clamp(30px, 10vw, 48px) !important;
+    line-height: 1.05 !important;
+    letter-spacing: 0.04em !important;
+    text-align: center !important;
+  }
+}
+
 
 
 
