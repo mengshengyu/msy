@@ -1198,7 +1198,10 @@ function PillNav({ pages, pageIndex, currentType, goTo, navOpen, setNavOpen, t }
           <button
             key={page.type}
             className={i === pageIndex ? "is-on" : ""}
-            onClick={() => goTo(i)}
+            onClick={() => {
+              goTo(i);
+              setNavOpen(false);
+            }}
             aria-current={i === pageIndex ? "page" : undefined}
           >
             <span className="nav-drawer-index">{String(i + 1).padStart(2, "0")}</span>
