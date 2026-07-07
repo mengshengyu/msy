@@ -967,7 +967,6 @@ function App() {
       )}
       <audio ref={bgmRef} preload="metadata" loop>
         <source src={asset("assets/bgm/pearl-harbor.mp3")} type="audio/mpeg" />
-        <source src={asset("assets/bgm/pearl-harbor.m4a")} type="audio/mp4" />
       </audio>
       <canvas ref={museumBackdropRef} className="museum-freeze-canvas" aria-hidden="true" />
       <div className="glass-prewarm" aria-hidden="true"><span /><span /><span /></div>
