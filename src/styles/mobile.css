@@ -1,0 +1,238 @@
+@media (max-width: 1180px){
+  .hero.profile:not(.works) .exp-slats,
+  .hero.works.profile .exp-slats{
+    gap: clamp(12px, 1.6vw, 22px) !important;
+    padding-left: clamp(18px, 3vw, 38px) !important;
+    padding-right: clamp(18px, 3vw, 38px) !important;
+  }
+}
+
+@media (max-width: 760px){
+  .nav-hamburger,
+  .nav-drawer,
+  .nav-veil{
+    display: none !important;
+  }
+
+  .pill-nav,
+  .pill-nav.nav-cover,
+  .pill-nav.nav-profile,
+  .pill-nav.nav-works,
+  .pill-nav.nav-contact{
+    display: inline-flex !important;
+    position: fixed !important;
+    top: 24px !important;
+    left: 50vw !important;
+    right: auto !important;
+    width: max-content !important;
+    max-width: calc(100vw - 24px) !important;
+    padding: 4px 6px !important;
+    transform: translate3d(-50%, 0, 0) !important;
+    z-index: 90 !important;
+  }
+
+  .pill-tabs{
+    gap: 2px !important;
+  }
+
+  .pill-tabs::before{
+    top: 5px !important;
+    bottom: 5px !important;
+    left: 5px !important;
+    width: clamp(68px, 21vw, 78px) !important;
+    transform: translateX(calc(var(--active-index, 0) * clamp(72px, 22vw, 82px))) !important;
+  }
+
+  .pill-tabs button{
+    width: clamp(68px, 21vw, 78px) !important;
+    height: 42px !important;
+    font-size: 12px !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  .lang-toggle{
+    top: 76px !important;
+    right: 12px !important;
+    width: 38px !important;
+    min-width: 38px !important;
+    height: 38px !important;
+    padding: 0 !important;
+    z-index: 92 !important;
+  }
+  html,
+  body,
+  #root,
+  .album-shell{
+    min-height: 100dvh;
+    overflow: hidden !important;
+  }
+
+  .museum-welcome.welcome-screen{
+    justify-content: center !important;
+    gap: 18px !important;
+    padding: 0 22px !important;
+  }
+
+  .museum-welcome .welcome-video-source{
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+
+  .museum-welcome .welcome-kicker,
+  .museum-welcome .welcome-name,
+  .museum-welcome .welcome-role{
+    width: min(92vw, 420px) !important;
+  }
+
+  .museum-welcome .welcome-kicker{
+    font-size: 10px !important;
+    letter-spacing: 0.26em !important;
+  }
+
+  .museum-welcome .welcome-name{
+    font-size: clamp(48px, 16vw, 78px) !important;
+    line-height: 0.86 !important;
+  }
+
+  .museum-welcome .welcome-role{
+    font-size: 11px !important;
+    line-height: 1.45 !important;
+    letter-spacing: 0.16em !important;
+  }
+
+  .hero-stage{
+    height: 100dvh !important;
+  }
+
+  .hero.cover{
+    padding: 96px 22px 32px !important;
+    align-items: end !important;
+  }
+
+  .hero.cover .hero-bottom{
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .hero.cover .hero-title{
+    font-size: clamp(44px, 15vw, 68px) !important;
+    line-height: 0.9 !important;
+  }
+
+  .hero.cover .hero-lede,
+  .hero.cover .hero-side-text{
+    font-size: 13px !important;
+    line-height: 1.58 !important;
+  }
+
+  .cover-detail{
+    max-height: 44vh !important;
+    overflow: auto !important;
+    padding-right: 2px !important;
+  }
+
+  .detail-stats{
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+  }
+
+  .skills-block{
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  .hero.profile .exp-frame{
+    min-height: 100dvh !important;
+    overflow: hidden !important;
+  }
+
+  .hero.profile:not(.works) .exp-slats,
+  .hero.works.profile .exp-slats{
+    position: absolute !important;
+    inset: auto 0 150px 0 !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    gap: 16px !important;
+    padding: 100px 22px 20px !important;
+    overflow-x: auto !important;
+    overflow-y: visible !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .hero.profile .exp-slats::-webkit-scrollbar{
+    display: none !important;
+  }
+
+  .hero.profile .exp-slat,
+  .hero.profile .exp-slat:nth-child(n){
+    width: min(76vw, 320px) !important;
+    min-width: min(76vw, 320px) !important;
+    transform: none !important;
+    scroll-snap-align: center !important;
+  }
+
+  .hero.profile .exp-slat:hover .exp-slat-image-frame,
+  .hero.profile .exp-slat:has(+ .exp-slat:hover) .exp-slat-image-frame,
+  .hero.profile .exp-slat:hover + .exp-slat .exp-slat-image-frame{
+    width: 100% !important;
+    margin-left: 0 !important;
+    transform: none !important;
+  }
+
+  .hero.profile .exp-slat > .exp-slat-year{
+    top: -42px !important;
+    height: 28px !important;
+    padding: 0 14px !important;
+    font-size: 10px !important;
+  }
+
+  .hero.profile .exp-slat-body,
+  .hero.works.profile .exp-slat-body{
+    width: 100% !important;
+    height: auto !important;
+    margin-top: 12px !important;
+  }
+
+  .hero.profile .exp-slat-text,
+  .hero.works.profile .exp-slat-text{
+    height: 136px !important;
+    min-height: 136px !important;
+    max-height: 136px !important;
+    padding: 13px 14px !important;
+  }
+
+  .hero.profile .exp-slat-game,
+  .hero.works.profile .exp-slat-game{
+    font-size: 18px !important;
+    line-height: 1.22 !important;
+  }
+
+  .hero.profile .profile-preview-frame figcaption{
+    display: grid !important;
+    gap: 8px !important;
+  }
+
+  .gallery-stage{
+    padding: 72px 14px 108px !important;
+  }
+
+  .gallery-frame{
+    width: 94vw !important;
+    max-height: 62dvh !important;
+  }
+
+  .thumb-rail{
+    bottom: 18px !important;
+    left: 12px !important;
+    right: 12px !important;
+    gap: 10px !important;
+    overflow-x: auto !important;
+  }
+
+  .thumb{
+    width: 82px !important;
+    min-width: 82px !important;
+  }
+}
