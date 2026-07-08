@@ -1325,4 +1325,353 @@
 
 
 
+#root .album-shell[data-glass-mode="frosted"] :is(
+  .pill-nav,
+  .lang-toggle,
+  .audio-toggle,
+  .glass-mode-toggle,
+  .hero.profile .exp-slat > .exp-slat-year,
+  .hero.profile .exp-slat-text,
+  .back-pill,
+  .lightbox-close,
+  .detail-stats div,
+  .skills-block article
+) {
+  background-color: rgba(var(--museum-glass-rgb, 118, 106, 82), 0.24) !important;
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.05) 46%, rgba(255, 255, 255, 0.10)),
+    radial-gradient(130% 96% at 18% 0%, rgba(255, 255, 255, 0.18), transparent 52%),
+    var(--static-glass-image) !important;
+  background-size: auto, auto, 100vw 100dvh !important;
+  background-position: center, center, var(--static-glass-x, 50%) var(--static-glass-y, 50%) !important;
+  background-repeat: no-repeat !important;
+  background-blend-mode: screen, normal, soft-light !important;
+  border-color: rgba(255, 255, 255, 0.22) !important;
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.24),
+    inset 0 -12px 24px rgba(255, 255, 255, 0.04),
+    0 16px 48px rgba(0, 0, 0, 0.22) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(145%) contrast(1.04) brightness(1.04) !important;
+  backdrop-filter: blur(18px) saturate(145%) contrast(1.04) brightness(1.04) !important;
+  filter: none !important;
+}
+
+@media (max-width: 760px) and (orientation: portrait) {
+  html,
+  body,
+  #root,
+  #root .album-shell {
+    width: 100vw !important;
+    height: 100dvh !important;
+    min-height: 100dvh !important;
+    overflow: hidden !important;
+  }
+
+  #root .hero.profile:not(.works) .exp-frame,
+  #root .hero.works.profile .exp-frame {
+    height: 100dvh !important;
+    min-height: 100dvh !important;
+    overflow: hidden !important;
+  }
+
+  #root .hero.profile:not(.works) .exp-slats,
+  #root .hero.works.profile .exp-slats {
+    position: absolute !important;
+    inset: calc(max(12px, env(safe-area-inset-top)) + 110px) 0 max(18px, env(safe-area-inset-bottom)) 0 !important;
+    z-index: 5 !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 16px 28px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 14px !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    pointer-events: auto !important;
+    touch-action: pan-y !important;
+    overscroll-behavior: contain !important;
+    scroll-snap-type: y proximity !important;
+    -webkit-overflow-scrolling: touch !important;
+    perspective: none !important;
+    transform: none !important;
+  }
+
+  #root .hero.profile .exp-slat,
+  #root .hero.profile .exp-slat:nth-child(n),
+  #root .hero.profile .exp-slat:hover {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    flex: 0 0 auto !important;
+    width: min(92vw, 360px) !important;
+    min-width: 0 !important;
+    max-width: 360px !important;
+    height: auto !important;
+    min-height: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    opacity: 1 !important;
+    z-index: auto !important;
+    transform: none !important;
+    pointer-events: auto !important;
+    touch-action: pan-y !important;
+    scroll-snap-align: start !important;
+  }
+
+  #root .hero.profile .exp-slat > .exp-slat-year {
+    position: static !important;
+    order: 0 !important;
+    width: min(72vw, 258px) !important;
+    max-width: 100% !important;
+    height: 26px !important;
+    margin: 0 auto 8px !important;
+    padding: 0 10px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    transform: none !important;
+  }
+
+  #root .hero.profile .exp-slat-image-frame,
+  #root .hero.profile .exp-slat:nth-child(n) .exp-slat-image-frame,
+  #root .hero.profile .exp-slat:hover .exp-slat-image-frame {
+    position: relative !important;
+    order: 1 !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    height: clamp(178px, 48vw, 250px) !important;
+    margin: 0 !important;
+    display: grid !important;
+    place-items: center !important;
+    overflow: hidden !important;
+    transform: none !important;
+  }
+
+  #root .hero.profile .exp-slat-image-frame .exp-slat-cover {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+
+  #root .hero.profile .exp-slat-body,
+  #root .hero.works.profile .exp-slat-body {
+    order: 2 !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin-top: 10px !important;
+  }
+
+  #root .hero.profile .exp-slat-text,
+  #root .hero.works.profile .exp-slat-text,
+  #root .hero.profile .exp-slat:hover .exp-slat-text {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 112px !important;
+    max-height: none !important;
+    padding: 12px 13px !important;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+  #root .hero.cover,
+  #root .hero.contact {
+    padding: 82px 28px 34px !important;
+    display: grid !important;
+    align-items: end !important;
+    overflow: hidden !important;
+  }
+
+  #root .hero.cover .hero-bottom,
+  #root .hero.contact .hero-bottom {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.25fr) minmax(220px, 0.75fr) !important;
+    gap: 24px !important;
+    align-items: end !important;
+    transform: none !important;
+  }
+
+  #root .hero.cover .hero-title,
+  #root .hero.contact .hero-title {
+    white-space: nowrap !important;
+    font-size: clamp(42px, 8vw, 68px) !important;
+  }
+
+  #root .hero.profile:not(.works) .exp-frame,
+  #root .hero.works.profile .exp-frame {
+    position: absolute !important;
+    inset: 0 !important;
+    height: 100dvh !important;
+    overflow: hidden !important;
+  }
+
+  #root .hero.profile:not(.works) .exp-frame-head,
+  #root .hero.works.profile .exp-frame-head {
+    position: absolute !important;
+    left: 24px !important;
+    top: 64px !important;
+    z-index: 6 !important;
+    width: min(360px, 42vw) !important;
+    padding: 0 !important;
+    display: block !important;
+    background: none !important;
+    pointer-events: none !important;
+  }
+
+  #root .hero.profile:not(.works) .exp-frame-head .hero-title,
+  #root .hero.works.profile .exp-frame-head .hero-title {
+    display: block !important;
+    margin: 0 !important;
+    font-size: clamp(32px, 6vw, 48px) !important;
+    white-space: nowrap !important;
+  }
+
+  #root .hero.profile:not(.works) .exp-frame-head .hero-eyebrow,
+  #root .hero.profile:not(.works) .exp-frame-head .hero-lede,
+  #root .hero.works.profile .exp-frame-head .hero-eyebrow,
+  #root .hero.works.profile .exp-frame-head .hero-lede {
+    display: none !important;
+  }
+
+  #root .hero.profile:not(.works) .exp-slats,
+  #root .hero.works.profile .exp-slats {
+    position: absolute !important;
+    inset: auto 0 30px 0 !important;
+    z-index: 5 !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    padding: 0 20px !important;
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    gap: clamp(8px, 1.5vw, 14px) !important;
+    align-items: end !important;
+    justify-content: center !important;
+    overflow: visible !important;
+    pointer-events: auto !important;
+    touch-action: manipulation !important;
+    perspective: none !important;
+    transform: none !important;
+  }
+
+  #root .hero.profile .exp-slat,
+  #root .hero.profile .exp-slat:nth-child(n),
+  #root .hero.profile .exp-slat:hover {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    flex: none !important;
+    display: grid !important;
+    grid-template-rows: auto auto !important;
+    gap: 0 !important;
+    opacity: 1 !important;
+    z-index: auto !important;
+    transform: none !important;
+    pointer-events: auto !important;
+  }
+
+  #root .hero.profile .exp-slat > .exp-slat-year {
+    position: absolute !important;
+    left: 50% !important;
+    top: -32px !important;
+    width: auto !important;
+    max-width: calc(100% - 8px) !important;
+    height: 24px !important;
+    padding: 0 8px !important;
+    font-size: 9px !important;
+    transform: translateX(-50%) !important;
+  }
+
+  #root .hero.profile:not(.works) .exp-slat-image-frame,
+  #root .hero.profile:not(.works) .exp-slat:nth-child(n) .exp-slat-image-frame {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9 !important;
+    padding: 3px !important;
+    display: grid !important;
+    place-items: center !important;
+    overflow: hidden !important;
+  }
+
+  #root .hero.works.profile .exp-slat-image-frame,
+  #root .hero.works.profile .exp-slat:nth-child(n) .exp-slat-image-frame {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 7680 / 3292 !important;
+    padding: 3px !important;
+    display: grid !important;
+    place-items: center !important;
+    overflow: hidden !important;
+  }
+
+  #root .hero.profile .exp-slat-image-frame .exp-slat-cover,
+  #root .hero.profile .exp-slat:nth-child(n) .exp-slat-image-frame .exp-slat-cover {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+
+  #root .hero.profile .exp-slat-body,
+  #root .hero.works.profile .exp-slat-body {
+    width: min(100%, 150px) !important;
+    height: 94px !important;
+    justify-self: center !important;
+    margin-top: 8px !important;
+  }
+
+  #root .hero.profile .exp-slat-text,
+  #root .hero.works.profile .exp-slat-text,
+  #root .hero.profile .exp-slat:hover .exp-slat-text {
+    width: 100% !important;
+    height: 94px !important;
+    min-height: 94px !important;
+    max-height: 94px !important;
+    grid-template-rows: 14px 26px 34px !important;
+    gap: 4px !important;
+    padding: 9px 10px !important;
+    overflow: hidden !important;
+    transform: none !important;
+  }
+
+  #root .hero.profile .exp-slat-company,
+  #root .hero.works.profile .exp-slat-company {
+    font-size: 9px !important;
+    line-height: 14px !important;
+  }
+
+  #root .hero.profile .exp-slat-game,
+  #root .hero.works.profile .exp-slat-game {
+    font-size: clamp(13px, 1.9vw, 16px) !important;
+    line-height: 26px !important;
+  }
+
+  #root .hero.profile .exp-slat-role,
+  #root .hero.works.profile .exp-slat-role {
+    font-size: 9px !important;
+    line-height: 14px !important;
+  }
+}
+
 

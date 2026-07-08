@@ -553,7 +553,29 @@ function App() {
     const shell = shellRef.current;
     if (!shell) return undefined;
     let wheelLock = 0;
+    const canScrollNested = (event) => {
+      const deltaX = event.deltaX;
+      const deltaY = event.deltaY;
+      const prefersY = Math.abs(deltaY) >= Math.abs(deltaX);
+      const path = typeof event.composedPath === "function" ? event.composedPath() : [];
+      const nodes = path.length ? path : [event.target];
+
+      return nodes.some((node) => {
+        if (!(node instanceof HTMLElement) || node === shell) return false;
+        const style = window.getComputedStyle(node);
+        if (prefersY && /(auto|scroll)/.test(style.overflowY)) {
+          const maxY = node.scrollHeight - node.clientHeight;
+          if (maxY > 1) return deltaY > 0 ? node.scrollTop < maxY - 1 : node.scrollTop > 1;
+        }
+        if (!prefersY && /(auto|scroll)/.test(style.overflowX)) {
+          const maxX = node.scrollWidth - node.clientWidth;
+          if (maxX > 1) return deltaX > 0 ? node.scrollLeft < maxX - 1 : node.scrollLeft > 1;
+        }
+        return false;
+      });
+    };
     const handleWheel = (event) => {
+      if (canScrollNested(event)) return;
       event.preventDefault();
       const now = Date.now();
       if (now - wheelLock < 760) return;
