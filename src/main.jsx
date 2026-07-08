@@ -962,7 +962,6 @@ function App() {
     <main
       lang={lang}
       data-glass-mode={glassMode}
-      data-liquid-glass={glassMode === "frosted" ? "frosted" : undefined}
       className={`album-shell${entered ? " is-entered" : ""}${entering ? " is-entering" : ""}${welcomePlaying ? " is-welcome-playing" : ""}${homeRevealed ? " is-home-revealed" : ""}${siteReady ? " is-site-ready" : ""}${glassSettled ? " is-glass-settled" : ""}`}
       style={{
         "--static-glass-image": `url("${asset("assets/glass/fake-glass-bg.webp")}")`,

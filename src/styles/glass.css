@@ -1356,6 +1356,46 @@
   filter: none !important;
 }
 
+#root .album-shell[data-glass-mode="liquid"] > .liquid-glass-proxy {
+  opacity: 1 !important;
+  border: 1px solid rgba(255, 255, 255, 0.28) !important;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.035) 42%, rgba(255, 255, 255, 0.12)),
+    radial-gradient(120% 140% at 14% 0%, rgba(255, 255, 255, 0.24), transparent 48%) !important;
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.34),
+    inset 0 -16px 28px rgba(255, 255, 255, 0.05),
+    0 18px 54px rgba(0, 0, 0, 0.24) !important;
+  -webkit-backdrop-filter: blur(8px) saturate(170%) contrast(1.08) brightness(1.08) !important;
+  backdrop-filter: blur(8px) saturate(170%) contrast(1.08) brightness(1.08) !important;
+}
+
+#root .album-shell[data-glass-mode="liquid"]:not([data-liquid-glass="ready"]) :is(
+  .pill-nav,
+  .lang-toggle,
+  .audio-toggle,
+  .glass-mode-toggle,
+  .hero.profile .exp-slat > .exp-slat-year,
+  .hero.profile .exp-slat-text,
+  .back-pill,
+  .lightbox-close,
+  .detail-stats div,
+  .skills-block article
+) {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.04) 44%, rgba(255, 255, 255, 0.13)),
+    radial-gradient(120% 140% at 14% 0%, rgba(255, 255, 255, 0.22), transparent 50%),
+    rgba(94, 132, 142, 0.20) !important;
+  border-color: rgba(255, 255, 255, 0.24) !important;
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.28),
+    inset 0 -14px 26px rgba(255, 255, 255, 0.05),
+    0 18px 54px rgba(0, 0, 0, 0.22) !important;
+  -webkit-backdrop-filter: blur(10px) saturate(170%) contrast(1.08) brightness(1.08) !important;
+  backdrop-filter: blur(10px) saturate(170%) contrast(1.08) brightness(1.08) !important;
+  filter: none !important;
+}
+
 @media (max-width: 760px) and (orientation: portrait) {
   html,
   body,
